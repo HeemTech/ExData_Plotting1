@@ -1,5 +1,5 @@
 ## Loading and cleaning data
-data<-read.csv2(list[4])
+data<-read.csv2("household_power_consumption.txt")
 data$Date<-as.Date(data$Date,"%d/%m/%Y")
 d1<-filter(data,Date=="2007-02-01"|Date=="2007-02-02")
 d2<-mutate(d1,datetime=strptime(paste(as.character(Date),Time),"%Y-%m-%d %H:%M:%S"))
